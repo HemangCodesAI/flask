@@ -22,7 +22,7 @@ def predict_api():
         file = request.files['file']
         image = Image.open(file)
         prediction_result = predict(image)
-        return {"prediction_result": prediction_result}
+        return print({"prediction_result": prediction_result})
     except Exception as e:
         return jsonify({"error": str(e)})
 
