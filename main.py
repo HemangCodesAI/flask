@@ -11,6 +11,7 @@ def predict(image):
     normalized_image = img_array / 255.0
     model = load_model("achawala.h5")
     ans = model.predict(normalized_image.reshape(1, 32, 32, 3))
+    print("huhua")
     if ans[0][0] < ans[0][1]:
         return "Non-Anemic"
     else:
